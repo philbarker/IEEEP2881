@@ -1,0 +1,133 @@
+shapeID,propertyID,propertyLabel,note,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,severity
+LearningResourceShape,rdf:type,Type,,TRUE,,IRI,,lrmi:LearningResource,,,
+LearningResourceShape,dct:description,Description,"An account of the resource.
+Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",,,Literal,rdf:langString,,,,
+LearningResourceShape,sdo:duration,Duration,"The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
+Use the duration section in the referenced ISO 8601, per the definition.",,,Literal,xsd:duration,,,,
+LearningResourceShape,lrmi:learningResourceType,String Learning Resource Type,"The predominant type or kind characterizing the learning resource.
+For example, 'presentation', 'handout'.",,,Literal,rdf:langString,,,,
+LearningResourceShape,sdo:timeRequired,Time Required,"Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience.
+Use the duration section in the ISO 8601 date format.  This “work” can be thought of as “item” in the context of this standard.",,,Literal,xsd:duration,,,,
+LearningResourceShape,dct:title,Title,"A name given to the resource.
+A name given to the resource by which it can be referenced or found, distinguishing it from others.",,,Literal,rdf:langString,,,,
+LearningResourceShape,lrmi:assesses,Assesses,The resource being described is intended to assess the competency or learning outcome defined by the referenced term.,,,IRI BNODE,,,,AssessShape,
+LearningResourceShape,dct:audience,Audience,"Class of agents for whom the resource is intended or useful.
+Best practice is to use this property with non-literal values from a vocabulary of audience types.",,,IRI BNODE,,,,,
+LearningResourceShape,dct:educationLevel,Audience education level.,"A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.
+Examples of educational levels include 'beginner', 'intermediate' or 'advanced'; 'primary', 'secondary', or 'tertiary'; levels on a mastery scale; and other informal or formal sets of level indicators.",,,IRI BNODE,,,,AudienceShape,
+LearningResourceShape,dct:format,Format,"The file format, physical medium, or dimensions of the resource.
+Implementations should use controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [MIME (https://www.iana.org/assignments/media-typ es/media-types.xhtml). Examples of dimensions include size and duration.",,,IRI BNODE,,,,FormatShape,
+LearningResourceShape,dct:instructionalMethod,Instructional Method,"A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.
+Instructional methods include all methods and actions used to engender learning from planning and implementation through evaluation and feedback.",,,IRI BNODE,,,,InstructionalMethodShape,
+LearningResourceShape,dct:isPartOf,Is Part Of,"A related resource in which the described resource is physically or logically included.
+This property is intended to be used with non-literal values. This property is an inverse property of hasPart.",,,IRI BNODE,,,,PartOfShape,
+LearningResourceShape,sdo:keywords,Keywords,"Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+Format should repeat the property for each keyword or tags that describe or help contextualize the item.",,,IRI BNODE,,,,KeywordShape,
+LearningResourceShape,dct:language,Language,"A language of the resource.
+Implementations should use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47
+(https://www.rfc-editor.org/info/bcp47 ) language tag.",,,IRI BNODE,,,,LanguageShape,
+LearningResourceShape,lrmi:learningResourceType,Learning Resource Type,"The predominant type or kind characterizing the learning resource.
+For example, 'presentation', 'handout'.",,,IRI BNODE,,,,LearningResourceTypeShape,
+LearningResourceShape,ceterms:offeredBy,Offered By,"Agent that offers the resource.
+The organization or person making the offer of availability of a LearningResource or LearningEvent. In the context of this document, this is typically not an exchange of rights other than simply using/attending the Learning Event.",,,IRI BNODE,,,,OffererShape,
+LearningResourceShape,ceterms:ownedBy,Owned By,"Organization or person with an enforceable claim or legal title to the resource.
+Agent includes credentialing organizations, quality assurance organizations and persons. It does not not include credential holders.",,,IRI BNODE,,,,OwnerShape,
+LearningResourceShape,dct:spatial,Spatial Coverage,"Spatial characteristics of the resource.
+A topically or jurisdictionally related geographic region or named place that is important to the audience or contextualization of the resource.",,,IRI BNODE,,,,SpatialShape,
+LearningResourceShape,dct:subject,Subject,"The topic of the resource.
+Implementations should refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.
+Words and phrases describing valuable terms to retrieval or understanding that do not directly address the subject or topic should be captured using the keyword property.",,,IRI BNODE,,,,SubjectShape,
+LearningResourceShape,lrmi:teaches,Teaches,"The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+Learning can be considered as acquiring the competency or achieving the learning outcome.",,,IRI BNODE,,,,TeachesShape,
+LearningResourceShape,dct:temporal,Temporal Coverage,"Temporal characteristics of the resource.
+Temporal characteristics may denote either aspects of the subject matter of the resource (e.g., a named historical era) or aspects of the jurisdictional applicability (e.g., when the resource is valid or specifically intended).",,,IRI BNODE,,,,TemporalShape,
+LearningResourceShape,ifla:hasAdaptation,Has An Adaptation,"Relates a prior work to another work that represents a modification of the content of the prior work for a purpose, use, or medium other than that for which it was originally intended. The modification of the content of the prior work shall be sufficient in degree to warrant the adaptation work being considered as a new work autonomous with respect to the prior work.
+If the change does not alter the original intention, use the dct:hasVersion.",,,IRI BNODE,,,,LearningResourceShape,
+LearningResourceShape,dct:hasFormat,Has Format,"A related resource that is substantially the same as the pre-existing described resource, but in another format.",,,IRI BNODE,,,,LearningResourceShape,
+LearningResourceShape,dct:hasPart,has Part,"A related resource that is included either physically or logically in the described resource.
+This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of.",,,IRI BNODE,,,,PartOfShape,
+LearningResourceShape,dct:hasVersion,Has Version.,"A related resource that is a version, edition, or adaptation of the described resource.
+This Standard does not specify policies or data model for versioning.  This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.
+A revised version of the resource being described that does not alter the original purpose or use.",,,IRI BNODE,,,,LearningResourceShape,
+LearningResourceShape,ifla:isAdaptationOf,Is Adaptation Of,"Relates a work to a prior work of which it represents a modification of the content for a purpose, use, or medium other than that for which it was originally intended. The modification of the content of the prior work shall be sufficient in degree to warrant the adaptation work being considered as a new work autonomous with respect to the prior work.
+If the change does not alter the original intention, use the dct:isVersionOf.",,,IRI BNODE,,,,LearningResourceShape,
+LearningResourceShape,dct:isVersionOf,Is Version Of,"A related resource of which the described resource is a version, edition, or adaptation.
+This Standard does not specify policies or data model for versioning. This property is intended to be used with non-literal values. This property is an inverse property of hasVersion.
+The resource of which the resource being described is a revision. An edition would be covered under an LMT version. Changes of the intention of the resource are considered “adaptations” and should use isAdaptationOf.",,,IRI BNODE,,,,LearningResourceShape,
+LearningResourceShape,lmt:hasEvent,Has Event,A related event based on this LearningResource.,,,IRI BNODE,,,,LearningEventShape,
+LearningEventShape,rdf:type,Type,,TRUE,,IRI,,lmt:LearningEvent,,,
+LearningEventShape,dct:description,Description,"An account of the resource.
+Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",,,Literal,rdf:langString,,,,
+LearningEventShape,sdo:duration,Duration,"The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
+Use the duration section in the referenced ISO 8601, per the definition.",,,Literal,xsd:duration,,,,
+LearningEventShape,sdo:endDate,End Date,The end date and time of the item (in ISO 8601 date format),,,Literal,"xsd:gYear
+xsd:gYearMonth
+xsd:date
+xsd:dateTime",,,,
+LearningEventShape,sdo:startDate,Start Date,"The start date and time of the item (in ISO
+8601 date format)",,,Literal,"xsd:gYear
+xsd:gYearMonth
+xsd:date
+xsd:dateTime",,,,
+LearningEventShape,lmt:isEventOf,Is Event Of,A resource from which an event was created by allocating a time and assets.,,,IRI BNODE,,,,LearningResourceShape,
+LearningEventShape,lrmi:assesses,Assesses,The resource being described is intended to assess the competency or learning outcome defined by the referenced term.,,,IRI BNODE,,,,AssessShape,
+LearningEventShape,dct:audience,Audience,"Class of agents for whom the resource is intended or useful.
+Best practice is to use this property with non-literal values from a vocabulary of audience types.",,,IRI BNODE,,,,AudienceShape,
+LearningEventShape,dct:educationLevel,Audience education level,"A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.
+Examples of educational levels include 'beginner', 'intermediate' or 'advanced'; 'primary', 'secondary', or 'tertiary'; levels on a mastery scale; and other informal or formal sets of level indicators.",,,IRI BNODE,,,,EducationLevelShape,
+LearningEventShape,sdo:eventSchedule,Event Schedule,"Associates an Event with a Schedule. There are circumstances where it is preferable to share a schedule for a series of repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An Event that is associated with a Schedule using this property should not have startDate or endDate properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months or seasons.",,,IRI BNODE,,,,ScheduleShape,
+LearningEventShape,dct:instructionalMethod,Instructional Method,"A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.
+Instructional methods include all methods and actions used to engender learning from planning and implementation through evaluation and feedback.",,,IRI BNODE,,,,InstructionalMethodShape,
+LearningEventShape,dct:instructor,Instructor,"A person assigned to instruct or provide assistance for the CourseInstance.
+Instructor is intentionally inclusive of anyone or anything playing an active role in the instructional process.",,,IRI BNODE,,,,InstructorShape,
+LearningEventShape,sdo:keywords,Keywords,"Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+Format should repeat the property for each keyword or tags that describe or help contextualize the item.",,,IRI BNODE,,,,KeywordShape,
+LearningEventShape,dct:language,Language,"A language of the resource.
+Implementations should use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47
+(https://www.rfc-editor.org/info/bcp47 ) language tag.",,,IRI BNODE,,,,LanguageShape,
+LearningEventShape,sdo:location,Location,"The location of, for example, where an event is happening, where an organization is located, or where an action takes place.",,,IRI BNODE,,,,,
+LearningEventShape,ceterms:offeredBy,Offered By,"Agent that offers the resource.
+The organization or person making the offer of availability of a LearningResource or LearningEvent. In the context of this document, this is typically not an exchange of rights other than simply using/attending the Learning Event.",,,IRI BNODE,,,,OffererShape,
+LearningEventShape,ceterms:ownedBy,,"Organization or person with an enforceable claim or legal title to the resource.
+Agent includes credentialing organizations, quality assurance organizations and persons. It does not not include credential holders..",,,IRI BNODE,,,,OwnerShape,
+LearningEventShape,dct:spatial,Spatial Coverage,"Spatial characteristics of the resource.
+A topically or jurisdictionally related geographic region or named place that is important to the audience or contextualization of the resource.",,,IRI BNODE,,,,SpatialShape,
+LearningEventShape,dct:subject,Subject,"The topic of the resource.
+Implementations should refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.
+Words and phrases describing valuable terms to retrieval or understanding that do not directly address the subject or topic should be captured using the keyword property.",,,IRI BNODE,,,,SubjectShape,
+LearningEventShape,lrmi:teaches,Teaches,"The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+Learning can be considered as acquiring the competency or achieving the learning outcome.",,,IRI BNODE,,,,TeachesShape,
+LearningEventShape,dct:temporal,Temporal Coverage,"Temporal characteristics of the resource.
+Temporal characteristics may denote either aspects of the subject matter of the resource (e.g., a named historical era) or aspects of the jurisdictional applicability (e.g., when the resource is valid or specifically intended).",,,IRI BNODE,,,,TemporalShape,
+AssessShape,rdf:type,Type,,TRUE,,IRI,,"scd:CompetencyDefinition
+ceasn:Competency
+asn:Statement",,,Warning
+AudienceShape,rdf:type,Type,,TRUE,,IRI,,"dct:AgentClass
+skos:Concept",,,Warning
+EducationLevelShape,rdf:type,Type,,TRUE,,IRI,,"sdo:DefinedTerm
+skos:Concept",,,Warning
+ScheduleShape,rdf:type,Type,,TRUE,,IRI,,"sdo:Schedule
+ceterms:ScheduleFrequency
+ceterms:ScheduleTiming",,,Warning
+FormatShape,rdf:type,Type,,TRUE,,IRI,,"sdo:DefinedTerm
+skos:Concept",,,Warning
+InstructionalMethodShape,rdf:type,Type,,TRUE,,IRI,,"dct:MethodOfInstruction
+skos:Concept",,,Warning
+InstructorShape,rdf:type,Type,,TRUE,,IRI,,"dct:Agent
+sdo:Person",,,Warning
+PartOfShape,rdf:type,Type,,TRUE,,IRI,,"lrmi:LearningResource
+sdo:CreativeWork",,,Warning
+KeywordShape,rdf:type,Type,,TRUE,,IRI,,"skos:Concept
+sdo:DefinedTerm",,,Warning
+LanguageShape,rdf:type,Type,,TRUE,,IRI,,skos:Concept,,,Warning
+LearningResourceTypeShape,rdf:type,Type,,TRUE,,IRI,,skos:Concept,,,Warning
+LocationShape,rdf:type,Type,,TRUE,,IRI,,"sdo:Place
+sdo:VirtualLocation",,,Warning
+OffererShape,rdf:type,Type,,TRUE,,IRI,,sdo:Organization,,,Warning
+OwnerShape,rdf:type,Type,,TRUE,,IRI,,sdo:Organization,,,Warning
+SpatialShape,rdf:type,Type,,TRUE,,IRI,,dct:Location,,,Warning
+SubjectShape,rdf:type,Type,,TRUE,,IRI,,skos:Concept,,,Warning
+TeachesShape,rdf:type,Type,,TRUE,,IRI,,"scd:CompetencyDefinition
+ceasn:Competency
+asn:Statement",,,Warning
+TemporalShape,rdf:type,Type,,TRUE,,IRI,,dct:PeriodOfTime,,,Warning
